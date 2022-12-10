@@ -9,7 +9,6 @@ const OverviewChart = ({ isDashboard = false, view }) => {
 
   const [totalSalesLine, totalUnitsLine] = useMemo(() => {
     if(!data) return [];
-
     const { monthlyData } = data;
     const totalSalesLine = {
       id: "totalSales",
@@ -38,7 +37,6 @@ const OverviewChart = ({ isDashboard = false, view }) => {
 
       return {sales: curSales, units: curUnits}
     }, { sales: 0, units: 0 });
-
     return [[totalSalesLine], [totalUnitsLine]]
   }, [data]);
 
